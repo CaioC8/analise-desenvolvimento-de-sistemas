@@ -1,4 +1,4 @@
-import { CalculadorFrete } from "./calculador-frete.ts";
+import type { CalculadorFrete } from "./calculador-frete.ts";
 
 export class CalculadorFreteGratis implements CalculadorFrete {
   public calcularFrete(distancia: number): number {

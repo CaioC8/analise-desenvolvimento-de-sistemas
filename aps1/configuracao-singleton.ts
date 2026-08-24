@@ -1,3 +1,5 @@
+// Singleton: garante que exista apenas uma instância
+// das configurações durante a execução da aplicação.
 export class ConfiguracaoSingleton {
   private static configuracao: ConfiguracaoSingleton | null = null;
 
@@ -11,7 +13,7 @@ export class ConfiguracaoSingleton {
     this.porta = 3000;
   }
 
-  public static getConfiguracaoSingleton(): ConfiguracaoSingleton {
+  public static getInstancia(): ConfiguracaoSingleton {
     if (this.configuracao === null) {
       this.configuracao = new ConfiguracaoSingleton();
     }

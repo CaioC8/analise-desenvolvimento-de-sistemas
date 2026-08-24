@@ -1,26 +1,31 @@
 import { Cliente } from "./cliente.ts";
-import { TipoFrete } from "./tipo-frete.ts";
 
 export class Pedido {
   private assinatura: string;
   private cliente: Cliente;
+
+  // O tipo desta variável foi definido diretamente como um objeto literal,
+  // evitando a criação de uma interface apenas para representar os itens.
+  //
+  // Trata-se de uma lista de objetos em que cada objeto possui:
+  // produto, quantidade e valorUnitario.
+  //
+  // A estrutura se parece visualmente com JSON,
+  // mas aqui são objetos JavaScript/TypeScript.
   private itens: {
     produto: string;
     quantidade: number;
     valorUnitario: number;
   }[];
-  private tipoFrete: TipoFrete;
 
   constructor(
     assinatura: string,
     cliente: Cliente,
     itens: { produto: string; quantidade: number; valorUnitario: number }[],
-    tipoFrete: TipoFrete,
   ) {
     this.assinatura = assinatura;
     this.cliente = cliente;
     this.itens = itens;
-    this.tipoFrete = tipoFrete;
   }
 
   getAssinatura(): string {
@@ -35,11 +40,14 @@ export class Pedido {
     return this.itens;
   }
 
-  getTipoFrete(): TipoFrete {
-    return this.tipoFrete;
-  }
-
   toString(): string {
-    return `Assinatura: ${this.assinatura} - Cliente ${this.cliente.toString()} - Itens: ${this.itens} - Tipo do frete: ${this.tipoFrete}`;
+    const itens = this.itens
+      .map(
+        (item) =>
+          `${item.produto} (${item.quantidade}x R$ ${item.valorUnitario})`,
+      )
+      .join(", ");
+
+    return `Assinatura: ${this.assinatura} - Cliente: ${this.cliente.toString()} - Itens: ${itens}`;
   }
 }
