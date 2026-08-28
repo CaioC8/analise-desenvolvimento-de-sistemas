@@ -41,7 +41,7 @@
   "C_Cpp.copilotHover": "disabled",
   "chat.agent.enabled": false,
   "chat.commandCenter.enabled": false,
-  "chat.notifyWindowOnConfirmation": false,
+  "chat.notifyWindowOnConfirmation": "off",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.secondarySideBar.showLabels": false,
   "workbench.activityBar.location": "hidden",
