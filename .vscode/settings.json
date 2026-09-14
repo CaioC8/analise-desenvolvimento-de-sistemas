@@ -27,6 +27,7 @@
   "editor.unicodeHighlight.allowedCharacters": {
     "\u200b": true
   },
+  "editor.inlineSuggest.enabled": false,
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "toggle",
   "workbench.statusBar.visible": false,
