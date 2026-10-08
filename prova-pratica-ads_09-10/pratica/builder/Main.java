@@ -3,7 +3,7 @@ package pratica.builder;
 public class Main {
   public static void main(String[] args) {
     Notebook notebook =
-        new NotebookBuilder()
+        new Notebook.NotebookBuilder()
             .processador("Ryzen 7 5700x")
             .tela("Tela 24' OLED")
             .memoriaRamGb(32)
@@ -12,7 +12,7 @@ public class Main {
             .build();
 
     Celular celular =
-        new CelularBuilder()
+        new Celular.CelularBuilder()
             .processador("Snapdragon")
             .tela("Tela 6' LCS")
             .memoriaRamGb(12)

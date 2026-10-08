@@ -2,7 +2,7 @@ package pratica.builder;
 
 public class DiretorNotebook {
   public static Notebook criarNotebookGamer() {
-    return new NotebookBuilder()
+    return new Notebook.NotebookBuilder()
         .processador("Ryzen 7 9800X3D")
         .tela("Tela 32' OLED")
         .placaVideo("RTX 5090")
@@ -13,7 +13,7 @@ public class DiretorNotebook {
   }
 
   public static Notebook criarNotebookCorporativo() {
-    return new NotebookBuilder()
+    return new Notebook.NotebookBuilder()
         .processador("Intel Core i9-14900K")
         .tela("Tela 27' IPS")
         .memoriaRamGb(128)
